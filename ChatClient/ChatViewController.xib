@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController">
+            <connections>
+                <outlet property="textMessage" destination="eGO-Hr-jy6" id="d8k-eS-9S7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGO-Hr-jy6">
+                    <rect key="frame" x="10" y="70" width="234" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="TVf-JQ-kRh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3o-40-434">
+                    <rect key="frame" x="252" y="70" width="60" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="O4R-j5-d2L"/>
+                        <constraint firstAttribute="width" constant="60" id="wQl-Zh-D80"/>
+                    </constraints>
+                    <state key="normal" title="Send"/>
+                    <connections>
+                        <action selector="onSendMessage:" destination="-1" eventType="touchUpInside" id="Ngh-Z2-zGU"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VJd-Zd-D0A">
+                    <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="VJd-Zd-D0A" secondAttribute="bottom" id="Hxy-rY-ber"/>
+                <constraint firstItem="eGO-Hr-jy6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Let-xA-MSs"/>
+                <constraint firstItem="o3o-40-434" firstAttribute="leading" secondItem="eGO-Hr-jy6" secondAttribute="trailing" constant="8" id="N5T-Jo-vWg"/>
+                <constraint firstItem="eGO-Hr-jy6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="Ogl-zx-zQ5"/>
+                <constraint firstAttribute="trailing" secondItem="VJd-Zd-D0A" secondAttribute="trailing" id="VTs-Jp-PTf"/>
+                <constraint firstItem="VJd-Zd-D0A" firstAttribute="top" secondItem="o3o-40-434" secondAttribute="bottom" constant="8" id="bLm-Cu-bgl"/>
+                <constraint firstAttribute="trailing" secondItem="o3o-40-434" secondAttribute="trailing" constant="8" id="iqF-kB-4vi"/>
+                <constraint firstItem="VJd-Zd-D0A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xqG-lZ-LyL"/>
+                <constraint firstItem="o3o-40-434" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="zhd-mF-8yf"/>
+            </constraints>
+            <point key="canvasLocation" x="820" y="597"/>
+        </view>
+    </objects>
+</document>
